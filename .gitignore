@@ -21,3 +21,11 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# 创建并编辑 .gitignore
+echo "node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env" > .gitignore
