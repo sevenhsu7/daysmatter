@@ -1,5 +1,5 @@
 <template> 
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/logo.png" class="img">
   <h1>{{ nowDate() }}</h1>
   <!-- 添加切换按钮 -->
   <div class="toggle-container">
@@ -61,10 +61,9 @@ const switchView = (view) => {
   color: #2c3e50;
   margin-top: 60px;
 }
-
-.vue-logo {
-  width: 20%;  /* 相对于父容器的宽度 */
-  max-width: 150px;  /* 限制最大尺寸 */
+.img {
+  width: 15%;  /* 相对于父容器的宽度 */
+  max-width: 125px;  /* 限制最大尺寸 */
   height: auto;
 }
 /* 添加切换按钮的样式 */
