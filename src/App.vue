@@ -63,7 +63,7 @@ const switchView = (view) => {
 }
 .img {
   width: 15%;  /* 相对于父容器的宽度 */
-  max-width: 125px;  /* 限制最大尺寸 */
+  max-width: 100px;  /* 限制最大尺寸 */
   height: auto;
 }
 /* 添加切换按钮的样式 */
