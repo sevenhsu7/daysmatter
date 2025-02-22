@@ -33,7 +33,7 @@
 <script setup>
 import YearProgress from './components/YearProgress.vue'
 import QuarterProgress from './components/QuarterProgress.vue'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import MonthProgress from './components/MonthProgress.vue'
 
 const now = ref(new Date())
@@ -49,6 +49,27 @@ const nowDate = ()=>{
 const switchView = (view) => {
   currentView.value = view
 }
+
+// 添加 mounted 钩子
+onMounted(() => {
+  // 添加调试日志
+  console.log('Mounting and setting viewport...')
+  
+  // 检查是否已存在 viewport meta
+  const existingMeta = document.querySelector('meta[name="viewport"]')
+  
+  if (existingMeta) {
+    // 如果存在，直接修改内容
+    existingMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+  } else {
+    // 如果不存在，创建新的
+    const meta = document.createElement('meta')
+    meta.name = 'viewport'
+    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    document.head.appendChild(meta)
+  }
+})
+
 </script>
 
 
