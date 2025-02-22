@@ -62,6 +62,11 @@ const switchView = (view) => {
   margin-top: 60px;
 }
 
+.vue-logo {
+  width: 20%;  /* 相对于父容器的宽度 */
+  max-width: 150px;  /* 限制最大尺寸 */
+  height: auto;
+}
 /* 添加切换按钮的样式 */
 .toggle-container {
   margin: 20px 0;
